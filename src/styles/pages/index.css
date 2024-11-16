@@ -1,0 +1,68 @@
+@import "../common/reset.css";
+@import "../common/utilities.css";
+@import "../sharedLayouts/header.css";
+@import "../common/commonMobilestyles.css";
+
+/* hero section */
+.hero-section {
+    min-height: 100vh;
+    background: var(--primary-color);
+}
+
+.hero-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: inherit;
+    color: var(--white-color);
+}
+
+.hero-section .hero-details h2 {
+    color: var(--secondary-color);
+    font-size: var(--font-size-xxl);
+    font-family: "Miniver", sans-serif;
+}
+
+.hero-section .hero-details h3 {
+    margin: 0.8rem;
+    max-width: 70%;
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.hero-section .hero-details p {
+    margin: 2.4rem 0 4rem;
+    max-width: 70%;
+    font-size: var(--font-size-m);
+}
+.hero-section .hero-details .buttons {
+    display: flex;
+    gap: 2rem;
+}
+.hero-section .hero-details .button {
+    padding: 1rem 2.6rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: var(--border-radius-m);
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-n);
+    transition: 0.3s ease;
+    /* white-space: nowrap; */
+}
+
+.hero-section .hero-details .button:hover,
+.hero-section .hero-details .contact-us-btn {
+    color: var(--white-color);
+    border-color: var(--white-color);
+    background: transparent;
+}
+.hero-section .hero-details .contact-us-btn:hover {
+    color: var(--primary-color);
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+}
+.hero-section .hero-image-wrapper img {
+    max-width: 50rem;
+    margin-right: 3rem;
+}
