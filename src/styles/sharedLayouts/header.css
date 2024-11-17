@@ -53,17 +53,19 @@ header .navbar :where(#menu-close-btn, #menu-open-btn) {
         backdrop-filter: blur(5px);
         background: rgba(0, 0, 0, 0.2);
     }
-
+    header .navbar {
+        padding-top: 1rem;
+    }
     header .navbar :where(#menu-close-btn, #menu-open-btn) {
         display: inline-block;
         font-size: var(--font-size-l);
     }
 
-    header #menu-close-btn {
-        /* color: #000; */
+    header .navbar #menu-close-btn {
         position: absolute;
         right: 3rem;
         top: 3rem;
+        color: #000;
     }
     header .navbar #menu-open-btn {
         color: var(--white-color);

@@ -17,3 +17,47 @@ function closeMobileMenu() {
 
 toggleMobileMenu();
 closeMobileMenu();
+
+function appendMenu() {
+  const menuItems = [
+    {
+      name: "Hot Bevrages",
+      text: "Wide range of steaming hot coffee to make you awake and fresh.",
+    },
+    {
+      name: "Cold Bevrages",
+      text: "Creamy and smooth cold coffee that cools the soul.",
+    },
+    {
+      name: "Refreshments",
+      text: "Fresh and icy Drinks, that makes you cool.",
+    },
+    {
+      name: "Special Combo",
+      text: "Choose your favorite eating and drinking combination.",
+    },
+    {
+      name: "Desserts",
+      text: "Satiate your palate and take you on a culinary treat",
+    },
+    {
+      name: "Burger & French Fries",
+      text: "Delicious Juicy Burger, to satisfy your hunger",
+    },
+  ];
+  const menuContainer = document.querySelector(
+    ".menu-section .section-content ul",
+  );
+
+  for (let i = 0; i <= 6; i++) {
+    let { name, text } = menuItems[i];
+    menuContainer.innerHTML += `<li class='menu-item'>
+    <img src='./assets/menuImages/${name}.png'>
+    <div class='menu-details'>
+    <h3 class='name'>${name}</h3>
+    <p class='text'>${text}</p>
+    </div>
+    </li>`;
+  }
+}
+appendMenu();

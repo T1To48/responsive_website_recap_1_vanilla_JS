@@ -1,7 +1,6 @@
 @import "../common/reset.css";
 @import "../common/utilities.css";
 @import "../sharedLayouts/header.css";
-@import "../common/commonMobilestyles.css";
 
 body {
     background: var(--primary-color);
@@ -53,8 +52,7 @@ body {
     background: var(--secondary-color);
     font-weight: var(--font-weight-medium);
     font-size: var(--font-size-n);
-    transition: 0.3s ease;
-    /* white-space: nowrap; */
+    transition: 0.3s linear;
 }
 
 .hero-section .hero-details .button:hover,
@@ -77,11 +75,10 @@ body {
     .hero-section .section-content {
         flex-direction: column-reverse;
         gap: 3rem;
-        justify-content: flex-end;
         text-align: center;
         padding: 2rem auto;
         margin-top: 0;
-        /* padding-top: 3rem; */
+        padding-top: 3rem;
     }
 
     .hero-section .hero-details h3,
