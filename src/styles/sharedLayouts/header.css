@@ -1,5 +1,5 @@
 header {
-    position: fixed;
+    position: sticky;
     width: 100%;
     z-index: 1000;
     background: var(--primary-color);
@@ -43,6 +43,17 @@ header .navbar :where(#menu-close-btn, #menu-open-btn) {
 }
 
 @media (max-width: 900px) {
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
     header .navbar :where(#menu-close-btn, #menu-open-btn) {
         display: inline-block;
         font-size: var(--font-size-l);
@@ -72,12 +83,16 @@ header .navbar :where(#menu-close-btn, #menu-open-btn) {
         transition: 0.3s linear;
     }
 
-    header .navbar .navbar-list.show-mobile-menu {
+    /* adding the menu show class on the body is more effecient
+     because it let us take advantage from attaching class list to a higher level ancestor
+     this way any other elemnts can also be modified when the menu is open
+   for example: adding background blur effect when the menu is open */
+    body.show-mobile-menu header .navbar .navbar-list {
         left: 0;
     }
+
     header .navbar .navbar-list a {
         color: var(--dark-color);
         font-size: var(--font-size-l);
-        /* background: red; */
     }
 }

@@ -3,17 +3,23 @@
 @import "../sharedLayouts/header.css";
 @import "../common/commonMobilestyles.css";
 
+body {
+    background: var(--primary-color);
+}
+
 /* hero section */
 .hero-section {
-    min-height: 100vh;
-    background: var(--primary-color);
+    height: 100%;
+    /* background: var(--primary-color); */
 }
 
 .hero-section .section-content {
     display: flex;
     align-items: center;
+
     justify-content: center;
-    min-height: inherit;
+    margin-top: 10rem;
+    /* min-height: 100vh; */
     color: var(--white-color);
 }
 
@@ -62,7 +68,32 @@
     border-color: var(--secondary-color);
     background: var(--secondary-color);
 }
-.hero-section .hero-image-wrapper img {
+.hero-section .hero-image-wrapper {
     max-width: 50rem;
     margin-right: 3rem;
+}
+
+@media (max-width: 900px) {
+    .hero-section .section-content {
+        flex-direction: column-reverse;
+        gap: 3rem;
+        justify-content: flex-end;
+        text-align: center;
+        padding: 2rem auto;
+        margin-top: 0;
+        /* padding-top: 3rem; */
+    }
+
+    .hero-section .hero-details h3,
+    .hero-section .hero-details p {
+        max-width: 100%;
+    }
+
+    .hero-section .hero-details .buttons {
+        justify-content: center;
+    }
+    .hero-section .hero-image-wrapper {
+        max-width: 27rem;
+        margin-right: 0;
+    }
 }
