@@ -1,3 +1,31 @@
 @import "../common/reset.css";
 @import "../common/utilities.css";
 @import "../sharedLayouts/header.css";
+
+body {
+    font-size: var(--font-size-n);
+    background: var(--light-pink-color);
+}
+
+.testimonials-section {
+    padding: 3rem 0 5rem;
+}
+.testimonials-section .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    text-align: center;
+}
+.testimonials-section .testimonial img {
+    width: 18rem;
+    border-radius: var(--border-radius-circle);
+    margin-bottom: 4rem;
+    /* height: 18rem; */
+    /* object-fit: cover; */
+}
+
+.testimonials-section .testimonial .name {
+    margin-bottom: 1rem;
+    font-size: var(--font-size-m);
+}
