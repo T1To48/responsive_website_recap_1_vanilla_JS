@@ -1,3 +1,59 @@
 @import "../common/reset.css";
 @import "../common/utilities.css";
 @import "../sharedLayouts/header.css";
+body {
+    font-size: var(--font-size-n);
+    background: var(--dark-color);
+    color: var(--white-color);
+}
+.menu-section {
+    padding: 3rem 0 4rem;
+}
+.menu-section .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 9rem;
+    justify-content: space-evenly;
+}
+
+.menu-section .menu-list .menu-item {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3 - 9rem);
+
+    img {
+        margin-bottom: 1rem;
+        max-width: 80%;
+        aspect-ratio: 1;
+        object-fit: contain;
+    }
+
+    .name {
+        margin: 1rem 0;
+        font-size: var(--font-size-l);
+        font-weight: var(--font-weight-semibold);
+    }
+
+    .text {
+        font-size: var(--font-size-m);
+    }
+}
+
+@media (max-width: 900px) {
+    .menu-section .menu-list {
+        gap: 4rem;
+    }
+    .menu-section .menu-list .menu-item {
+        width: calc(100% / 2 - 4rem);
+        img {
+            max-width: 150px;
+        }
+        .text {
+            font-size: var(--font-size-n);
+        }
+    }
+}
