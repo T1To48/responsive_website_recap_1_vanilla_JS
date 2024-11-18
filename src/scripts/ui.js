@@ -52,7 +52,7 @@ function appendMenu() {
   for (let i = 0; i <= 6; i++) {
     let { name, text } = menuItems[i];
     menuContainer.innerHTML += `<li class='menu-item'>
-    <img src='./assets/menuImages/${name}.png'>
+    <img src='./assets/menuImages/${name}.png' alt='${name}'>
     <div class='menu-details'>
     <h3 class='name'>${name}</h3>
     <p class='text'>${text}</p>
