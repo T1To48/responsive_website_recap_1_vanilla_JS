@@ -30,22 +30,6 @@ body {
     max-width: 40%;
 }
 
-.about-section .about-details h2 {
-    text-align: center;
-    padding-bottom: 5rem;
-    text-transform: uppercase;
-
-    &::after {
-        content: "";
-        width: 10rem;
-        height: 0.5rem;
-        display: block;
-        margin: 1rem auto 0;
-        background: var(--secondary-color);
-        border-radius: var(--border-radius-s);
-    }
-}
-
 .about-section .about-details p {
     line-height: 3rem;
     margin-bottom: 5rem;
