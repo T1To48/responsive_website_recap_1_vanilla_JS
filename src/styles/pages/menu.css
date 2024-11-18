@@ -52,8 +52,5 @@ body {
         img {
             max-width: 150px;
         }
-        .text {
-            font-size: var(--font-size-n);
-        }
     }
 }

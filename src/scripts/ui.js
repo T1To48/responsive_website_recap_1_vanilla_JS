@@ -49,7 +49,7 @@ function appendMenu() {
     ".menu-section .section-content ul",
   );
 
-  for (let i = 0; i <= 6; i++) {
+  for (let i = 0; i <= menuItems.length; i++) {
     let { name, text } = menuItems[i];
     menuContainer.innerHTML += `
       <li class='menu-item'>
@@ -61,4 +61,43 @@ function appendMenu() {
       </li>`;
   }
 }
+
+function appendTestimonials() {
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      feedback: "Loved the french roast. Perfectly balanced and rich.",
+    },
+    {
+      name: "James Wilson",
+      feedback: "Great espresso blend! Smooth & bold flavor. Real delicacy.",
+    },
+    {
+      name: "Michael Brown",
+      feedback: "Fantastic moch flavor. Fresh and aromatic . One of a kind.",
+    },
+    {
+      name: "Emily Harris",
+      feedback: "Excellent quality! Freshly roasted beans. Highly recommended.",
+    },
+    {
+      name: "Anthony Thompson",
+      feedback: "Best decaf I've ever tried! Smooth rich taste.",
+    },
+  ];
+  const testimonialsList = document.querySelector(
+    ".slider-container  .testimonials-list ",
+  );
+
+  for (let i = 0; i <= testimonials.length; i++) {
+    let { name, feedback } = testimonials[i];
+    testimonialsList.innerHTML += `
+    <li class="testimonial">
+    <img src="./assets/testimonialsImages/${name}.jpg" alt="${name}">
+    <h3 class="name">${name} </h3>
+    <i class="feedback">"${feedback}"</i>
+    </li>`;
+  }
+}
+appendTestimonials();
 appendMenu();
